@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{137e2993-98ac-41be-950b-081c76463ef7}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>deep_equation\src\deep_equation\test.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="deep_equation\requirements.txt" />
+    <Content Include="deep_equation\resources\digit_a.png" />
+    <Content Include="deep_equation\resources\digit_b.png" />
+    <Content Include="deep_equation\src\deep_equation.egg-info\dependency_links.txt" />
+    <Content Include="deep_equation\src\deep_equation.egg-info\entry_points.txt" />
+    <Content Include="deep_equation\src\deep_equation.egg-info\requires.txt" />
+    <Content Include="deep_equation\src\deep_equation.egg-info\SOURCES.txt" />
+    <Content Include="deep_equation\src\deep_equation.egg-info\top_level.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="deep_equation\setup.py" />
+    <Compile Include="deep_equation\src\deep_equation\model.py" />
+    <Compile Include="deep_equation\src\deep_equation\best_model.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deep_equation\src\deep_equation\predictor.py" />
+    <Compile Include="deep_equation\src\deep_equation\test.py" />
+    <Compile Include="deep_equation\src\deep_equation\train.py" />
+    <Compile Include="deep_equation\tests\sample_test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="deep_equation" />
+    <Folder Include="deep_equation\resources" />
+    <Folder Include="deep_equation\src\" />
+    <Folder Include="deep_equation\src\deep_equation" />
+    <Folder Include="deep_equation\src\deep_equation.egg-info" />
+    <Folder Include="deep_equation\tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
+      <Version>3.7</Version>
+      <Description>env1 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

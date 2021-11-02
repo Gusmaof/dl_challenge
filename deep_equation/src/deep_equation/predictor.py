@@ -31,12 +31,16 @@ def load_image(filename):
 # load an image and predict the class
 def run_example():
 	# load the image
-	img = load_image('sample_image2.png')
+	img = load_image('sample_image.png')
+	img2 = load_image('sample_image2.png')
 	# load model
 	model = load_model('final_model.h5')
 	# predict the class
-	digit = model.predict_classes(img)
-	print(digit)
+	digitA,digitB = model.predict([img,img2])
+	Amax=np.argmax(digitA)
+	print(Amax)
+	Bmax=np.argmax(digitB)
+	print(Bmax)
  
 # entry point, run the example
 run_example()
