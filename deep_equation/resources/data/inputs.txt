@@ -1,0 +1,5 @@
+'deep_equation/resources/data/sample_image.png','deep_equation/resources/data/sample_image2.png','+'
+'deep_equation/resources/data/sample_image3.png','deep_equation/resources/data/sample_image2.png','-'
+'deep_equation/resources/data/sample_image.png','deep_equation/resources/data/sample_image3.png','*'
+'deep_equation/resources/data/sample_image.png','deep_equation/resources/data/sample_image2.png','/'
+'deep_equation/resources/data/sample_image.png','deep_equation/resources/data/sample_image4.png','/'
